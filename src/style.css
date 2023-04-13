@@ -1,3 +1,18 @@
+.weatherapp {
+  max-width: 600px;
+  margin: 70px auto;
+  padding: 20px;
+  border: 1px solid #edb1f1;
+  border-radius: 4px;
+}
+
+h1 {
+  color: #d59bf6;
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 27px;
+}
+
 img {
   width: 100px;
   height: 100px;
