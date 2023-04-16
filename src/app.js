@@ -3,7 +3,7 @@ let date = now.getDate();
 let hour = now.getHours();
 let mins = now.getMinutes();
 if (mins < 10) {
-  minutes = `0${minutes}`;
+  mins = `0${mins}`;
 }
 let year = now.getFullYear();
 let days = [
@@ -36,7 +36,7 @@ let today = document.querySelector(`#currentDate`);
 today.innerHTML = `${day}, ${month} ${date}, ${hour}:${mins}`;
 
 let apiKey = "dac7ababb64b3ca8acde2e00719b2bea";
-let city = "Madrid";
+let city = "Kapfenberg";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 console.log(apiUrl);
 
@@ -57,6 +57,12 @@ function displayTemperature(response) {
   windElement.innerHTML = `wind: ${Math.round(response.data.wind.speed)} km/h`;
   let humidityElement = document.querySelector("#currentHumidity");
   humidityElement.innerHTML = `humidity: ${response.data.main.humidity}%`;
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 axios.get(apiUrl).then(displayTemperature);
