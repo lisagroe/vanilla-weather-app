@@ -18,6 +18,23 @@
     <div class="container">
       <div class="weatherapp-wrapper">
         <div class="weatherapp">
+          <form id="search-form">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Search for a city ..."
+                  class="form-control"
+                  id="city-input"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-3">
+                <input type="submit" value="Search" class="btn btn-primary" />
+              </div>
+            </div>
+          </form>
+          <br />
           <h1 id="city">Madrid</h1>
           <img src="" alt="Clear" id="icon" class="float-left" />
 
