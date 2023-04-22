@@ -57,6 +57,16 @@ ul {
   margin-right: 17px;
 }
 
+.weather-temperature .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
+
 body {
   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/077/365/original/pexels-eberhard-grossgasteiger-2310713.jpg?1681654464");
   background-size: cover;
