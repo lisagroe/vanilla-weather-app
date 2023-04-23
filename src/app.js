@@ -35,6 +35,35 @@ let month = months[now.getMonth()];
 let today = document.querySelector(`#currentDate`);
 today.innerHTML = `${day}, ${month} ${date}, ${hour}:${mins}`;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row justify-content-center">`;
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+              <div class="col-2">
+                <div class="weather-forecast-date">${day}</div>
+                <img
+                  src="http://openweathermap.org/img/wn/01d@2x.png"
+                  alt=""
+                  width="36px"
+                />
+                <div class="weather-forecast-temp">
+                  <span class="weather-forecast-max">25°C|</span
+                  ><span class="weather-forecast-min">14°C</span>
+                </div>
+              </div>
+            
+          `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+displayForecast();
+
 function displayTemperature(response) {
   console.log(response.data);
   let temperatureElement = document.querySelector("#currentTemp");
