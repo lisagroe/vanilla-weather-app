@@ -67,6 +67,26 @@ ul {
   text-decoration: none;
 }
 
+.weather-forecast {
+  margin-top: 20px;
+  margin-left: 10px;
+  text-align: center;
+  font-size: 16px;
+  color: black;
+}
+
+.weather-forecast-date {
+  opacity: 0.7;
+}
+
+.weather-forecast-temp {
+  font-size: 13px;
+}
+
+.weather-forecast-min {
+  opacity: 0.7;
+}
+
 body {
   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/077/365/original/pexels-eberhard-grossgasteiger-2310713.jpg?1681654464");
   background-size: cover;
